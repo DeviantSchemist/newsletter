@@ -1,7 +1,5 @@
-
-
-
-import MobileLogo from "./assets/images/illustration-sign-up-mobile.svg";
+import Header from "./Header";
+import Description from "./Description";
 import './App.css';
 
 function App() {
@@ -9,7 +7,10 @@ function App() {
 
   return (
     <>
-      <img src={MobileLogo} alt="Mobile Banner" />
+      <Header />
+      <div className="pl-[24px] pr-[24px] pt-[40px]">
+        <Description />
+      </div>
     </>
   )
 }
