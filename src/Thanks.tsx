@@ -1,6 +1,6 @@
 import SuccessLogo from "./assets/images/icon-success.svg";
 
-const Thanks = () => {
+const Thanks = (props) => {
 
   return (
     <div className="pl-[24px] pr-[24px] pt-[149px] pb-[40px] flex flex-col font-Roberto items-start h-screen justify-between">
@@ -12,7 +12,7 @@ const Thanks = () => {
           Please open it and click the button inside to confirm your subscription
         </p>
       </div>
-      <button className="rounded-lg bg-[#242742] pt-[18px] pb-[14px] w-[312px]">
+      <button onClick={props.handleClick} className="rounded-lg bg-[#242742] pt-[18px] pb-[14px] w-[312px]">
         <span className="text-base font-bold text-center text-white font-RobertoBold">Dismiss message</span>
       </button>
     </div>
