@@ -2,8 +2,8 @@ import Icon from "./assets/images/icon-list.svg"
 
 const Description = () => {
   return (
-    <div className="w-[327px] h-[276px]">
-      <p className="w-[327px] left-0 top-0 text-[40px] font-bold text-left text-[#242742] mb-[24px]">
+    <div className="font-Roberto">
+      <p className="w-[327px] left-0 top-0 text-[40px] font-bold text-left text-[#242742] mb-[24px] font-RobertoBold">
         Stay updated!
       </p>
       <p className="w-[327px] left-0 top-16 text-base text-left text-[#242742] mb-[24px]">

@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Roberto: ["Roberto", "sans-serif"],
+        RobertoBold: ["RobertoBold", "sans"]
+      }
+    },
   },
   plugins: [],
 }
