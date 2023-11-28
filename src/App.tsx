@@ -19,13 +19,15 @@ function App() {
   }
 
   return (
-    <>
-      <Header />
-      <div className="pl-[24px] pr-[24px] pt-[40px] pb-[40px]">
-        <Description />
-        <Email handleClick={handleClick} />
+    <div className="lg:bg-[#36384D] lg:pl-[256px] lg:pr-[256px] lg:pt-[219px] lg:pb-[220px]">
+      <div className="lg:bg-white lg:rounded-[36px] lg:flex lg:flex-row-reverse">
+        <Header />
+        <div className="pl-[24px] pr-[24px] pt-[40px] pb-[40px]">
+          <Description />
+          <Email handleClick={handleClick} />
+        </div>
       </div>
-    </>
+    </div>
   )
 }
 
