@@ -8,7 +8,7 @@ const Header = () => {
     <>
       <img src={MobileLogo} alt="Mobile Banner" className="block lg:hidden" />
       <MediaQuery minWidth={1024}>
-        <img src={DesktopLogo} alt="Desktop Banner" className="block" />
+        <img src={DesktopLogo} alt="Desktop Banner" className="block lg:pt-[24px] lg:pb-[24px]" />
       </MediaQuery>
     </>
   )
