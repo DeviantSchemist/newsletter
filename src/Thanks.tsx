@@ -1,4 +1,5 @@
 import SuccessLogo from "./assets/images/icon-success.svg";
+import MediaQuery from "react-responsive";
 
 const Thanks = (props) => {
 
@@ -13,9 +14,15 @@ const Thanks = (props) => {
             Please open it and click the button inside to confirm your subscription
           </p>
         </div>
-        <button onClick={props.handleClick} className="rounded-lg bg-[#242742] pt-[18px] pb-[14px] w-[312px] lg:w-auto lg:pl-[125px] lg:pr-[124px]">
+        <button onClick={props.handleClick} className="rounded-lg bg-[#242742] pt-[18px] pb-[14px] w-[312px] lg:hidden">
           <span className="text-base font-bold text-center text-white font-RobertoBold">Dismiss message</span>
         </button>
+
+        <MediaQuery minWidth={1024}>
+          <button onClick={props.handleClick} className="rounded-lg bg-[#242742] pt-[18px] pb-[14px] pl-[125px] pr-[124px] hover:bg-gradient-to-bl from-[#ff6a3a] to-[#ff527b] hover:shadow-[0px 16px 32px 0 rgba(255,97,85,0.5)]">
+            <span className="text-base font-bold text-center text-white font-RobertoBold">Dismiss message</span>
+          </button>
+        </MediaQuery>
       </div>
     </div>
   )
