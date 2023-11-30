@@ -8,10 +8,15 @@ import { useState } from "react"
 
 function App() {
   const [press, setPress] = useState(false);
+  const [text, setText] = useState("");
 
   const handleClick = (event) => {
     event.preventDefault();
     setPress(!press);
+  }
+
+  const handleChange = (event) => {
+    setText(event.target.value);
   }
 
   if (press) {
@@ -24,7 +29,7 @@ function App() {
         <Header />
         <div className="pl-[24px] pr-[24px] pt-[40px] pb-[40px]">
           <Description />
-          <Email handleClick={handleClick} />
+          <Email handleClick={handleClick} handleChange={handleChange} value={text} />
         </div>
       </div>
     </div>
