@@ -9,9 +9,29 @@ import { useState } from "react"
 function App() {
   const [press, setPress] = useState(false);
   const [text, setText] = useState("");
+  const [error, setError] = useState(null); // this state value is null on the first render
 
-  const handleClick = (event) => {
+  const emailValidation = () => {
+    const regex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+    return regex.test(text);
+  }
+
+  const handleEmailClick = (event) => {
     event.preventDefault();
+    console.log(`Error value: ${error}, Press value: ${press}`)
+    if (!emailValidation()) {
+      setError("Valid email required")
+    }
+    else {
+      console.log(`Error will be set to empty string`);
+      setError("")
+      setPress(!press)
+    }
+  }
+
+  const handleThanksClick = (event) => {
+    event.preventDefault();
+    console.log(`Thanks clicked, press value: ${press}`)
     setPress(!press);
   }
 
@@ -20,7 +40,7 @@ function App() {
   }
 
   if (press) {
-    return <Thanks handleClick={handleClick} />
+    return <Thanks handleClick={handleThanksClick} />
   }
 
   return (
@@ -29,7 +49,8 @@ function App() {
         <Header />
         <div className="pl-[24px] pr-[24px] pt-[40px] pb-[40px]">
           <Description />
-          <Email handleClick={handleClick} handleChange={handleChange} value={text} />
+          <Email handleClick={handleEmailClick} handleChange={handleChange} value={text} />
+          {error}
         </div>
       </div>
     </div>
