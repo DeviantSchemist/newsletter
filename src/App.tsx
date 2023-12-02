@@ -10,6 +10,7 @@ function App() {
   const [press, setPress] = useState(false);
   const [text, setText] = useState("");
   const [error, setError] = useState(null); // this state value is null on the first render
+  const [invalidEmailPress, setInvalidEmailPress] = useState(false); // used for subsequent renders if user continuously enters invalid email format
 
   const emailValidation = () => {
     const regex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
@@ -21,6 +22,7 @@ function App() {
     console.log(`Error value: ${error}, Press value: ${press}`)
     if (!emailValidation()) {
       setError("Valid email required")
+      setInvalidEmailPress(!invalidEmailPress)
     }
     else {
       console.log(`Error will be set to empty string`);
@@ -49,8 +51,7 @@ function App() {
         <Header />
         <div className="pl-[24px] pr-[24px] pt-[40px] pb-[40px]">
           <Description />
-          <Email handleClick={handleEmailClick} handleChange={handleChange} value={text} />
-          {error}
+          <Email handleClick={handleEmailClick} handleChange={handleChange} value={text} error={error} />
         </div>
       </div>
     </div>
