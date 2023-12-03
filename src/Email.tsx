@@ -7,8 +7,10 @@ const Email = (props) => {
 
   return (
     <form className="flex flex-col mt-[40px] font-Roberto">
-      <label className="text-xs font-bold text-left text-[#242742] mb-[8px]">Email address</label>
-      <label className={props.error && yourElement.current !== document.activeElement ? "text-xs font-bold text-right text-[#ff6155]" : "hidden"}>Valid email required</label>
+      <div className="flex justify-between">
+        <label className="text-xs font-bold text-left text-[#242742] mb-[8px]">Email address</label>
+        <label className={props.error && yourElement.current !== document.activeElement ? "text-xs font-bold text-right text-[#ff6155]" : "hidden"}>Valid email required</label>
+      </div>
       <div className={props.error && yourElement.current !== document.activeElement ? "rounded-lg bg-[#ff6155]/[0.15] border border-[#ff6155] mb-[24px]" : "rounded-lg border border-[#19182b]/25 mb-[24px]"}>
         <input ref={yourElement} value={props.value} onChange={props.handleChange} placeholder="email@company.com" className={props.error && yourElement.current !== document.activeElement ? "rounded-lg text-base text-left text-[#ff6155] pt-[16px] pb-[16px] pl-[24px] w-full" : "rounded-lg text-base text-left text-[#242742] pt-[16px] pb-[16px] pl-[24px] w-full"} />
       </div>
