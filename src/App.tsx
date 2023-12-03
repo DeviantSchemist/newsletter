@@ -42,7 +42,7 @@ function App() {
   }
 
   if (press) {
-    return <Thanks handleClick={handleThanksClick} />
+    return <Thanks handleClick={handleThanksClick} text={text} />
   }
 
   return (

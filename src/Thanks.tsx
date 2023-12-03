@@ -10,7 +10,7 @@ const Thanks = (props) => {
           <img src={SuccessLogo} alt="Successful submission" className="mb-[40px]" />
           <p className="font-RobertoBold text-[40px] font-bold text-left text-[#242742] mb-[24px] leading-10">Thanks for subscribing!</p>
           <p className="text-base text-left text-[#242742] lg:mb-[40px]">
-            A confirmation email has been sent to <span className="font-bold font-RobertoBold">ash@loremcompany.com</span>.
+            A confirmation email has been sent to <span className="font-bold font-RobertoBold">{props.text}</span>.
             Please open it and click the button inside to confirm your subscription
           </p>
         </div>
