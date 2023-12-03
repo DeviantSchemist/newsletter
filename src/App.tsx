@@ -6,18 +6,18 @@ import './App.css';
 
 import { useState } from "react"
 
-function App() {
-  const [press, setPress] = useState(false);
-  const [text, setText] = useState("");
-  const [error, setError] = useState(null); // this state value is null on the first render
-  const [invalidEmailPress, setInvalidEmailPress] = useState(false); // used for subsequent renders if user continuously enters invalid email format
+function App(): React.JSX.Element {
+  const [press, setPress] = useState<boolean>(false);
+  const [text, setText] = useState<string>("");
+  const [error, setError] = useState<string | null>(null); // this state value is null on the first render
+  const [invalidEmailPress, setInvalidEmailPress] = useState<boolean>(false); // used for subsequent renders if user continuously enters invalid email format
 
-  const emailValidation = () => {
+  const emailValidation = (): boolean => {
     const regex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
     return regex.test(text);
   }
 
-  const handleEmailClick = (event) => {
+  const handleEmailClick = (event: Event): void => {
     event.preventDefault();
     console.log(`Error value: ${error}, Press value: ${press}`)
     if (!emailValidation()) {
@@ -31,14 +31,14 @@ function App() {
     }
   }
 
-  const handleThanksClick = (event) => {
+  const handleThanksClick = (event: Event): void => {
     event.preventDefault();
     console.log(`Thanks clicked, press value: ${press}`)
     setPress(!press);
   }
 
-  const handleChange = (event) => {
-    setText(event.target.value);
+  const handleChange = (event: Event): void => {
+    setText((event.target as HTMLInputElement).value);
   }
 
   if (press) {

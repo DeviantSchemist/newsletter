@@ -2,7 +2,7 @@ import MobileLogo from "./assets/images/illustration-sign-up-mobile.svg";
 import DesktopLogo from "./assets/images/illustration-sign-up-desktop.svg";
 import MediaQuery from "react-responsive";
 
-const Header = () => {
+const Header = (): React.JSX.Element => {
 
   return (
     <>

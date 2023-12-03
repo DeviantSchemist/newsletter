@@ -1,6 +1,6 @@
 import Icon from "./assets/images/icon-list.svg"
 
-const Description = () => {
+const Description = (): React.JSX.Element => {
   return (
     <div className="font-Roberto">
       <p className="w-[327px] left-0 top-0 lg:left-80 lg:top-[316px] text-[40px] lg:text-[53px] font-bold text-left text-[#242742] mb-[24px] font-RobertoBold">
