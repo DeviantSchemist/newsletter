@@ -17,7 +17,7 @@ function App(): React.JSX.Element {
     return regex.test(text);
   }
 
-  const handleEmailClick = (event: Event): void => {
+  const handleEmailClick = (event: React.MouseEvent<HTMLButtonElement>): void => {
     event.preventDefault();
     console.log(`Error value: ${error}, Press value: ${press}`)
     if (!emailValidation()) {
@@ -31,13 +31,13 @@ function App(): React.JSX.Element {
     }
   }
 
-  const handleThanksClick = (event: Event): void => {
+  const handleThanksClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
     event.preventDefault();
     console.log(`Thanks clicked, press value: ${press}`)
     setPress(!press);
   }
 
-  const handleChange = (event: Event): void => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setText((event.target as HTMLInputElement).value);
   }
 

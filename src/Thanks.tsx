@@ -1,7 +1,12 @@
 import SuccessLogo from "./assets/images/icon-success.svg";
 import MediaQuery from "react-responsive";
 
-const Thanks = (props): React.JSX.Element => {
+interface ThanksProps {
+  handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void,
+  text: string
+}
+
+const Thanks = (props: ThanksProps): React.JSX.Element => {
 
   return (
     <div className="lg:pt-[280px] lg:pb-[280px] lg:pl-[468px] lg:pr-[468px] lg:bg-[#36384D] lg:h-screen lg:flex lg:justify-center">

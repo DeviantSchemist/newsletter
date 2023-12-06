@@ -1,7 +1,15 @@
 import MediaQuery from "react-responsive"
 import { useRef } from "react"
 
-const Email = (props): React.JSX.Element => {
+
+interface EmailProps {
+  handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void,
+  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void,
+  value: string,
+  error: string | null
+}
+
+const Email = (props: EmailProps): React.JSX.Element => {
 
   const yourElement = useRef(null);
 
