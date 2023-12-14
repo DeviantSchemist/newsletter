@@ -63,24 +63,6 @@ I started out bootstrapping the project in Vite. Deleted boilerplate code/files,
 
 While building this project, I used a Figma plugin in order to make my workflow more efficient. However, the plugin did not generate code for the components in a way that worked with my own code, so I had to rewrite it. I learned a lot about the way that state works in React when implementing the email validation.
 
-This is a sample of the code
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
 
 ### Continued development
 
